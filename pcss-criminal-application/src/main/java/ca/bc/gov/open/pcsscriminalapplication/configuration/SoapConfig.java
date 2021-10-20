@@ -75,15 +75,15 @@ public class SoapConfig extends WsConfigurerAdapter {
         return messageFactory;
     }
 
-    @Bean(name = "pcssCriminal.wsProvider:pcssCriminal")
-    public Wsdl11Definition pcssCriminalW() {
+    @Bean(name = "JusticePCSSCriminal.wsProvider:pcssCriminalW")
+    public Wsdl11Definition JusticePCSSWSDL() {
         SimpleWsdl11Definition wsdl11Definition = new SimpleWsdl11Definition();
         wsdl11Definition.setWsdl(new ClassPathResource("xsdSchemas/pcssCriminalW.wsdl"));
         return wsdl11Definition;
     }
 
-    @Bean(name = "pcssCriminal.wsProvider:pcssCriminalSecure")
-    public Wsdl11Definition pcssCriminalSecure() {
+    @Bean(name = "JusticePCSSCriminal.wsProvider:pcssCriminalSecure")
+    public Wsdl11Definition JusticeSecurePCSSWSDL() {
         SimpleWsdl11Definition wsdl11Definition = new SimpleWsdl11Definition();
         wsdl11Definition.setWsdl(new ClassPathResource("xsdSchemas/pcssCriminalSecure.wsdl"));
         return wsdl11Definition;
