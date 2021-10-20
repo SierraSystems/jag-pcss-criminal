@@ -9,3 +9,4 @@ spec:
   - name: STRA
     status: STRA_STATUS_HERE
     last-updated: ''
+    
