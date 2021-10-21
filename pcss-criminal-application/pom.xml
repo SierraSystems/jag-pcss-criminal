@@ -204,6 +204,24 @@
 			<artifactId>micrometer-registry-prometheus</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>ca.bc.gov.open</groupId>
+			<artifactId>pcss-criminal-model</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>ca.bc.gov.open</groupId>
+			<artifactId>pcss-criminal-common</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>ca.bc.gov.open</groupId>
+			<artifactId>pcss-criminal-secure-model</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
 	</dependencies>
 	<profiles>
 		<profile>

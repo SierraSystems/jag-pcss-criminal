@@ -10,9 +10,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>ca.bc.gov.open</groupId>
-    <artifactId>pcss</artifactId>
+    <artifactId>pcss-criminal</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>pcss</name>
+    <name>pcss-criminal</name>
     <description>PCSS criminal module</description>
     <properties>
         <java.version>11</java.version>
@@ -31,12 +31,33 @@
     </repositories>
 
     <modules>
+        <module>pcss-criminal-common</module>
+        <module>pcss-criminal-model</module>
+        <module>pcss-criminal-secure-model</module>
         <module>pcss-criminal-application</module>
     </modules>
 
 
     <dependencies>
+	    <dependency>
+            <groupId>ca.bc.gov.open</groupId>
+            <artifactId>pcss-criminal-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
         <dependency>
+            <groupId>ca.bc.gov.open</groupId>
+            <artifactId>pcss-criminal-secure-model</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+		<dependency>
+            <groupId>ca.bc.gov.open</groupId>
+            <artifactId>pcss-criminal-model</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+		        <dependency>
             <groupId>ca.bc.gov.open</groupId>
             <artifactId>pcss-criminal-application</artifactId>
             <version>0.0.1-SNAPSHOT</version>
