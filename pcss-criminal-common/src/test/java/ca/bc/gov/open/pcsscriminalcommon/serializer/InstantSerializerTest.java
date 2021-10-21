@@ -112,9 +112,38 @@ public class InstantSerializerTest {
     @DisplayName("Error object not parsed")
     public void objecNotParsed() throws IOException {
 
-        Mockito.when(jsonParserMock.getText()).thenReturn("GARBAGE");
-
         Instant result = InstantSerializer.parse(null);
+
+        Assertions.assertNull(result);
+
+    }
+
+    @Test
+    @DisplayName("Success object soap parsed")
+    public void objectParsedSoap() throws IOException {
+
+        Instant result = InstantSerializer.parseSoap("26-NOV-01 12.00.00.0000000 PM -08:00");
+
+        Assertions.assertEquals("2001-11-26T07:00:00Z", result.toString());
+
+    }
+
+    @Test
+    @DisplayName("Success object soap parsed no time")
+    public void objectParsedNoTimeSoap() throws IOException {
+
+        Instant result = InstantSerializer.parseSoap("16-Apr-21");
+
+        Assertions.assertEquals("2021-04-16T07:00:00Z", result.toString());
+
+    }
+
+
+    @Test
+    @DisplayName("Error object not soap parsed")
+    public void objecNotParsedSoap() throws IOException {
+
+        Instant result = InstantSerializer.parseSoap(null);
 
         Assertions.assertNull(result);
 
