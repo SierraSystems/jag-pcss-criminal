@@ -31,11 +31,11 @@ public class InstantDeserializerTest {
     @DisplayName("Success object deserialized")
     public void objectDeserialized() throws IOException {
 
-        Mockito.when(jsonParserMock.getText()).thenReturn("2021-10-21T14:48:50+00:00");
+        Mockito.when(jsonParserMock.getText()).thenReturn("26-NOV-01 12.00.00.0000000 PM -08:00");
 
         Instant result = sut.deserialize(jsonParserMock, null);
 
-        Assertions.assertEquals(null, result);
+        Assertions.assertEquals("2001-11-26T20:00:00Z", result.toString());
 
     }
 
